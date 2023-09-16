@@ -11,10 +11,10 @@ namespace NLayer.Repository.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly AppDbDContext _dbContext;
+        private readonly AppDbContext _dbContext;
         private readonly DbSet<T> _dbSet;
 
-        public GenericRepository(AppDbDContext dbContext, DbSet<T> dbSet)
+        public GenericRepository(AppDbContext dbContext, DbSet<T> dbSet)
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
