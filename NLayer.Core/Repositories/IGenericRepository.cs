@@ -4,7 +4,7 @@ namespace NLayer.Core.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
-        IQueryable<T> GetAll(Expression<Func<T,bool>> expression);
+        IQueryable<T> GetAll();
         Task<T> GetByIDAsync(int id);
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
