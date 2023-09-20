@@ -1,14 +1,9 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Nlayer.Web.Modules;
 using NLayer.Repository;
 using NLayer.Service.Mapping;
-using NLayer.Service.Validations;
-using Nlayer.Web;
-using Nlayer.Web.Modules;
-using System.Reflection;
-using NLayer.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
