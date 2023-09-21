@@ -13,14 +13,14 @@ namespace Nlayer.Web.Services
 
         public async Task<List<ProductWithCategoryDto>> GetProductsWithCategoryAsync()
         {
-            var response = await _httpClient.GetFromJsonAsync<CustomResponseDto<List<ProductWithCategoryDto>>>("/products/GetProductsWithCategory");
+            var response = await _httpClient.GetFromJsonAsync<CustomResponseDto<List<ProductWithCategoryDto>>>("products/GetProductsWithCategory");
 
             return response.Data;
         }
 
-        public async Task<ProductDto> SaveAsync(ProductDto productDto)
+        public async Task<ProductDto> SaveAsync(ProductDto product)
         {
-            var response = await _httpClient.PostAsJsonAsync("products", productDto);
+            var response = await _httpClient.PostAsJsonAsync("products", product);
             if (!response.IsSuccessStatusCode) return null;
 
             var responseBody = await response.Content.ReadFromJsonAsync<CustomResponseDto<ProductDto>>();
