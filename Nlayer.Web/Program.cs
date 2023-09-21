@@ -8,6 +8,10 @@ using NLayer.Repository;
 using NLayer.Service.Mapping;
 using NLayer.Service.Validations;
 
+//MVC = 7241  5179
+
+//API = 7174  5124
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
